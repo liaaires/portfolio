@@ -129,13 +129,13 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden; /* Previne rolagem horizontal global */
   }
 
   #root {
-    @apply mx-auto w-full max-w-[1440px] relative;
-    overflow-x: clip;
-    overflow-y: visible;
+    /* Se você QUER limitar o tamanho do site a 1440px, deixe assim.
+       Se quer que o site ocupe toda a tela, mude max-w-[1440px] para max-w-none */
+    @apply mx-auto w-full max-w-none relative min-h-screen; 
   }
 
   /**
