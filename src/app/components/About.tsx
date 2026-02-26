@@ -125,237 +125,254 @@ function Helper({ text, text1 }: HelperProps) {
 export default function About() {
   return (
     <div className="bg-white min-h-screen overflow-x-hidden" data-name="About">
-      <div className="h-[779px] relative w-full">
-        <div className="bg-white h-[779px] overflow-clip relative w-full">
-          <div className="absolute h-[861.948px] left-[-217px] top-[-168px] w-[1917px]">
-            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1917 861.948">
-              <g id="Frame 1244" opacity="0.5">
-                <path d={svgPaths.p1c295b40} fill="url(#paint0_linear_7_193)" id="Rectangle 1144" />
-                <path d={svgPaths.p246d3880} fill="url(#paint1_linear_7_193)" id="Rectangle 1142" />
-                <path d={svgPaths.p30310200} fill="url(#paint2_linear_7_193)" id="Rectangle 1141" />
-                <path d={svgPaths.p23f85e80} fill="url(#paint3_linear_7_193)" id="Rectangle 1143" />
-              </g>
-              <defs>
-                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_7_193" x1="555.973" x2="199.015" y1="119.23" y2="770.521">
-                  <stop stopColor="#F5EAFF" />
-                  <stop offset="1" stopColor="#F3F6F8" />
-                </linearGradient>
-                <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_7_193" x1="1855.21" x2="1549.72" y1="233.516" y2="808.057">
-                  <stop stopColor="#BEDEFD" stopOpacity="0.05" />
-                  <stop offset="1" stopColor="#BEDEFD" stopOpacity="0.15" />
-                </linearGradient>
-                <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_7_193" x1="1707.21" x2="1371.93" y1="155.907" y2="786.49">
-                  <stop stopColor="#BEDEFD" stopOpacity="0.2" />
-                  <stop offset="1" stopColor="#BEDEFD" stopOpacity="0.2" />
-                </linearGradient>
-                <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_7_193" x1="1512.1" x2="1176.81" y1="155.907" y2="786.49">
-                  <stop stopColor="#BEDEFD" stopOpacity="0.2" />
-                  <stop offset="0.9999" stopColor="#BEDEFD" stopOpacity="0.197656" />
-                  <stop offset="1" stopColor="#BEDEFD" stopOpacity="0.2" />
-                </linearGradient>
-              </defs>
-            </svg>
+      
+      {/* SEÇÃO HERO (MENU + TÍTULO + FOTO) */}
+      <div className="relative w-full min-h-[800px] bg-white overflow-hidden">
+        
+       {/* Background SVG (Fundo abstrato - Listras azuis removidas) */}
+        <div className="absolute h-[861.948px] left-[-217px] top-[-168px] w-[1917px] pointer-events-none">
+          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1917 861.948">
+            <g id="Frame 1244" opacity="0.5">
+              <path d={svgPaths.p1c295b40} fill="url(#paint0_linear_7_193)" id="Rectangle 1144" />
+              {/* Formas azuis (Rectangle 1142, 1141, 1143) removidas daqui */}
+            </g>
+            <defs>
+              <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_7_193" x1="555.973" x2="199.015" y1="119.23" y2="770.521">
+                <stop stopColor="#F5EAFF" />
+                <stop offset="1" stopColor="#F3F6F8" />
+              </linearGradient>
+              {/* Definições de gradiente azul removidas para limpar o código */}
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Menu do Topo (Navbar) */}
+        <div className="absolute top-[50px] left-0 right-0 px-[128px] z-20">
+          <div className="flex justify-between items-center w-full">
+            <Link to="/" className="leading-[normal] not-italic text-[#0a0614] text-[32.278px] no-underline" style={{ fontFamily: 'Anton, sans-serif' }}>Lia Aires</Link>
+            <div className="content-stretch flex gap-[30px] items-center relative shrink-0">
+              <Link to="/about" className="font-semibold leading-[normal] not-italic relative shrink-0 text-[#0a0614] text-[16px] no-underline hover:underline transition-all duration-200" style={{ fontFamily: 'Inter, sans-serif' }}>Sobre</Link>
+              <Link to="/" className="font-semibold leading-[normal] not-italic relative shrink-0 text-[#0a0614] text-[16px] no-underline hover:underline transition-all duration-200" style={{ fontFamily: 'Inter, sans-serif' }}>Projetos</Link>
+            </div>
           </div>
-          <p className="absolute font-['Inter:Bold',sans-serif] font-bold leading-[normal] left-[128px] not-italic text-[#0a0614] text-[96px] top-[calc(50%-223.5px)] w-[612px] whitespace-pre-wrap">Olá! Meu nome é Lia</p>
-          <div className="absolute top-[50px] left-0 right-0 px-[128px]">
-            <div className="flex justify-between items-center">
-              <Link to="/" className="leading-[normal] not-italic text-[#0a0614] text-[32.278px] no-underline" style={{ fontFamily: 'Anton, sans-serif' }}>Lia Aires</Link>
-              <div className="content-stretch flex gap-[30px] items-center relative shrink-0">
-                <Link to="/about" className="font-semibold leading-[normal] not-italic relative shrink-0 text-[#0a0614] text-[16px] no-underline hover:underline transition-all duration-200" style={{ fontFamily: 'Inter, sans-serif' }}>Sobre</Link>
-                <Link to="/" className="font-semibold leading-[normal] not-italic relative shrink-0 text-[#0a0614] text-[16px] no-underline hover:underline transition-all duration-200" style={{ fontFamily: 'Inter, sans-serif' }}>Projetos</Link>
+        </div>
+
+        {/* CONTEÚDO PRINCIPAL: Alinhado com Flexbox */}
+        <div className="relative z-10 w-full px-[128px] pt-[220px] pb-20 flex flex-col lg:flex-row justify-between items-center gap-16 min-h-[800px]">
+          
+          {/* COLUNA ESQUERDA: Texto */}
+          <div className="flex flex-col gap-10 items-start shrink-0 w-full max-w-[612px]">
+            <p className="font-['Inter:Bold',sans-serif] font-bold leading-[1.1] not-italic text-[#0a0614] text-[96px] m-0 whitespace-pre-wrap">
+              Olá! Meu{'\n'}nome é Lia
+            </p>
+            <div className="font-['Inter:Thin',sans-serif] font-thin leading-[35px] not-italic text-[#0a0614] text-[18px] w-full flex flex-col gap-6 m-0">
+              <p className="m-0">Sou estudante de Sistemas e Mídias Digitais na Universidade Federal do Ceará e Designer UI/UX.</p>
+              <p className="m-0">{`Aspirante a pesquisadora em Interação Humano-Computador, compreender a forma em que as pessoas interagem com as TICs é o que mais me motiva a planejar designs cada vez mais centrados nas necessidades dos usuários.`}</p>
+            </div>
+          </div>
+
+          {/* COLUNA DIREITA: Foto */}
+          {/* Reduzi o tamanho de w-[490px] h-[552px] para w-[400px] h-[450px] */}
+          <div className="relative shrink-0 w-[400px] h-[450px] rounded-[30px]">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[30px]">
+              <img alt="Lia Aires" className="absolute h-[183.75%] left-[-0.04%] max-w-none top-[-64.33%] w-[143.56%]" src={imgRectangle361} />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* --- CONTEÚDO PRINCIPAL (GRID 2 COLUNAS) --- */}
+      <div className="w-full px-[128px] py-16 flex flex-col lg:flex-row gap-20 items-start">
+        
+        {/* --- COLUNA ESQUERDA (Maior) --- */}
+        <div className="flex flex-col gap-16 flex-1">
+          
+          {/* Experiências */}
+          <div className="flex flex-col gap-6 w-full">
+            <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] text-[#6a6f8e] text-[25px] m-0">Experiências</p>
+            <div className="border border-[#cad9ec] border-solid rounded-[24px] p-8 flex flex-col gap-4">
+              <p className="font-['Inter:Semi_Bold',sans-serif] font-normal text-[#0a0614] text-[20px] m-0">Bolsista PIBITI/PIBIC</p>
+              <div className="flex gap-[5px] items-start text-[#6a6f8e]">
+                <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] m-0">Célula Multimídia</p>
+                <p className="font-['Heebo:Regular',sans-serif] font-normal text-[14px] m-0 tracking-[0.3px]">|</p>
+                <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[16px] m-0">Ago 2025 - Atualmente</p>
               </div>
+              <Helper text="-" text1="Desenvolvimento e Prototipagem de uma Plataforma de Apoio à Prática do Design Ético em Interfaces Digitais" />
+              <Helper text="-" text1="O projeto visa fornecer a designers e desenvolvedores recursos metodológicos e ferramentas para a implementação de padrões de design positivos em interfaces digitais interativas." />
             </div>
           </div>
-        </div>
-        <div className="absolute font-['Inter:Thin',sans-serif] font-thin leading-[35px] left-[128px] not-italic text-[#0a0614] text-[18px] top-[434px] w-[572px] whitespace-pre-wrap">
-          <p className="mb-0">Sou estudante de Sistemas e Mídias Digitais na Universidade Federal do Ceará e Designer UI/UX.</p>
-          <p className="mb-0">&nbsp;</p>
-          <p>{`Aspirante a pesquisadora em Interação Humano-Computador, compreender a forma em que as pessoas interagem com as TICs é o que mais me motiva a planejar designs cada vez mais centrados nas necessidades dos usuários. `}</p>
-        </div>
-        <div className="absolute h-[552px] left-[813px] rounded-[30px] top-[259px] w-[490px]">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[30px]">
-            <img alt="" className="absolute h-[183.75%] left-[-0.04%] max-w-none top-[-64.33%] w-[143.56%]" src={imgRectangle361} />
-          </div>
-        </div>
-      </div>
-      <p className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] left-[128px] not-italic text-[#6a6f8e] text-[25px] top-[947px]">Experiências</p>
-      <div className="absolute border border-[#cad9ec] border-solid h-[257px] left-[128px] overflow-clip rounded-[24px] top-[1017px] w-[730px]">
-        <div className="absolute content-stretch flex flex-col gap-[14px] items-start leading-[normal] left-[30px] top-[39px] w-[621px]">
-          <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold min-w-full not-italic relative shrink-0 text-[#0a0614] text-[16px] w-[min-content] whitespace-pre-wrap">Bolsista PIBITI/PIBIC</p>
-          <div className="content-stretch flex gap-[5px] items-start relative shrink-0 text-[#6a6f8e]">
-            <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold not-italic relative shrink-0 text-[16px]">Célula Multimídia</p>
-            <p className="font-['Heebo:Regular',sans-serif] font-normal relative shrink-0 text-[14px] tracking-[0.3px]">|</p>
-            <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold not-italic relative shrink-0 text-[16px]">Ago 2025 - Atualmente</p>
-          </div>
-          <Helper text="-" text1="Desenvolvimento e Prototipagem de uma Plataforma de Apoio à Prática do Design Ético em Interfaces Digitais" />
-          <Helper text="-" text1="O projeto visa fornecer a designers e desenvolvedores recursos metodológicos e ferramentas para a implementação de padrões de design positivos em interfaces digitais interativas." />
-        </div>
-      </div>
-      <p className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] left-[128px] not-italic text-[#6a6f8e] text-[25px] top-[1337px]">Formação Acadêmica</p>
-      <div className="absolute left-[128px] rounded-[24px] top-[1407px] w-[720px]">
-        <div className="content-stretch flex flex-col items-start overflow-clip pb-[30px] pt-[29px] px-[18px] relative rounded-[inherit] w-full">
-          <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-            <div className="content-stretch flex flex-col gap-[17px] items-start leading-[normal] not-italic relative shrink-0 w-[410px]">
-              <p className="font-['Inter:Regular',sans-serif] font-normal min-w-full relative shrink-0 text-[#0a0614] text-[20px] w-[min-content] whitespace-pre-wrap">Bacharelado em Sistemas e Mídias Digitais</p>
-              <div className="content-stretch flex flex-col font-['Inter:Thin',sans-serif] font-thin gap-[5px] items-start relative shrink-0 text-[#6a6f8e] text-[16px]">
-                <p className="relative shrink-0">Universidade Federal do Ceará</p>
-                <p className="relative shrink-0">2024 - 2027 (previsto)</p>
-              </div>
-            </div>
-            <div className="h-[64px] relative shrink-0 w-[52px]" data-name="image 71">
-              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage71} />
-            </div>
-          </div>
-        </div>
-        <div aria-hidden="true" className="absolute border border-[#cad9ec] border-solid inset-0 pointer-events-none rounded-[24px]" />
-      </div>
-      <p className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] left-[128px] not-italic text-[#6a6f8e] text-[25px] top-[1586px]">Certificados</p>
-      <div className="absolute border border-[#cad9ec] border-solid h-[186px] left-[128px] overflow-clip rounded-[24px] top-[1653px] w-[354px]">
-        <div className="absolute content-stretch flex flex-col gap-[15px] items-start leading-[normal] left-[16px] top-[55px] w-[250px]">
-          <p className="font-['Inter:Regular',sans-serif] font-normal min-w-full not-italic relative shrink-0 text-[#0a0614] text-[20px] w-[min-content] whitespace-pre-wrap">Introdução a UI/UX Design</p>
-          <div className="content-stretch flex gap-[5px] items-start relative shrink-0 text-[#6a6f8e]">
-            <p className="font-['Inter:Thin',sans-serif] font-thin not-italic relative shrink-0 text-[16px]">2025</p>
-            <p className="font-['Heebo:Regular',sans-serif] font-normal relative shrink-0 text-[14px] tracking-[0.3px]">|</p>
-            <p className="font-['Inter:Thin',sans-serif] font-thin not-italic relative shrink-0 text-[16px]">Prefeitura de Fortaleza</p>
-          </div>
-        </div>
-      </div>
-      <div className="absolute border border-[#cad9ec] border-solid h-[186px] left-[128px] overflow-clip rounded-[24px] top-[1856px] w-[354px]">
-        <div className="absolute content-stretch flex flex-col gap-[6px] items-start leading-[normal] left-[13px] top-[58px] w-[326px]">
-          <p className="font-['Inter:Regular',sans-serif] font-normal not-italic relative shrink-0 text-[#0a0614] text-[20px] w-full whitespace-pre-wrap">Língua Japonesa</p>
-          <Helper1 text="2024 - 2026" text1="|" text2="Universidade Estadual do Ceará" />
-        </div>
-      </div>
-      <div className="absolute border border-[#cad9ec] border-solid h-[186px] left-[494px] overflow-clip rounded-[24px] top-[1653px] w-[354px]">
-        <div className="absolute content-stretch flex flex-col gap-[6px] items-start leading-[normal] left-[13px] top-[58px] w-[326px]">
-          <p className="font-['Inter:Regular',sans-serif] font-normal not-italic relative shrink-0 text-[#0a0614] text-[20px] w-full whitespace-pre-wrap">Língua Inglesa</p>
-          <Helper1 text="2013 - 2017" text1="|" text2="Hilpro Idiomas" />
-        </div>
-      </div>
-      <div className="absolute h-[1006px] left-[896px] top-[947px] w-[409px]">
-        <p className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] left-0 not-italic text-[#6a6f8e] text-[25px] top-0">Design Skills</p>
-        <div className="absolute bg-white border border-[#cad9ec] border-solid h-fit pb-[30px] pt-[18px] left-0 rounded-[24px] top-[70px] w-[409px]">
-          <div className="content-stretch flex flex-col gap-[19px] items-start px-[16px] w-[359px]">
-            <Text text="Design de Experiência do Usuário (UX)" />
-            <Text text="Design de Interface do Usuário (UI)" />
-            <Wrapper2>{`Web Design `}</Wrapper2>
-            <Text text="Design System" />
-            <Text text="Design Thinking" />
-            <Text1 text="Aplicação de Testes de Usabilidade e Avaliação Heurística" />
-          </div>
-        </div>
-        <p className="absolute font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] left-[4px] not-italic text-[#6a6f8e] text-[25px] top-[639px]">Idiomas</p>
-        <div className="absolute bg-white border border-[#cad9ec] border-solid h-[253px] left-[4px] overflow-clip rounded-[24px] top-[706px] w-[405px]">
-          <div className="absolute content-stretch flex gap-[15px] items-center justify-center left-[14px] top-[14px]">
-            <div className="relative shrink-0 size-[55px]">
-              <Helper2 />
-              <div className="absolute contents left-[15px] top-[15px]" data-name="Mask Group">
-                <div className="absolute left-[12.5px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[2.5px_2.5px] mask-size-[25px_25px] size-[30px] top-[12.5px]" data-name="5105sTFNoNL 1" style={{ maskImage: `url('${img5105STfNoNl1}')` }}>
-                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img5105STfNoNl2} />
+
+          {/* Formação Acadêmica */}
+          <div className="flex flex-col gap-6 w-full">
+            <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] text-[#6a6f8e] text-[25px] m-0">Formação Acadêmica</p>
+            <div className="border border-[#cad9ec] border-solid rounded-[24px] p-8 flex items-center justify-between">
+              <div className="flex flex-col gap-4">
+                <p className="font-['Inter:Regular',sans-serif] font-normal text-[#0a0614] text-[20px] m-0">Bacharelado em Sistemas e Mídias Digitais</p>
+                <div className="flex flex-col font-['Inter:Thin',sans-serif] font-thin gap-1 text-[#6a6f8e] text-[16px]">
+                  <p className="m-0">Universidade Federal do Ceará</p>
+                  <p className="m-0">2024 - 2027 (previsto)</p>
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col font-['Inter:Thin',sans-serif] font-thin justify-center leading-[0] not-italic relative shrink-0 text-[#0a0614] text-[16px] whitespace-nowrap">
-              <p className="leading-[normal]">Português (Nativo)</p>
-            </div>
-          </div>
-          <div className="absolute content-stretch flex gap-[15px] items-center justify-center left-[14px] top-[99px]">
-            <div className="relative shrink-0 size-[55px]" data-name="English">
-              <div className="absolute left-0 size-[55px] top-0">
-                <Helper2 />
-                <MaskGroup>
-                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img768PxSquareFlagOfTheUnitedKingdom1} />
-                </MaskGroup>
+              <div className="h-[64px] w-[52px] shrink-0">
+                <img alt="Brasão UFC" className="object-cover size-full" src={imgImage71} />
               </div>
             </div>
-            <div className="flex flex-col font-['Inter:Thin',sans-serif] font-thin justify-center leading-[0] not-italic relative shrink-0 text-[#0a0614] text-[16px] whitespace-nowrap">
-              <p className="leading-[normal]">Inglês (Avançado)</p>
-            </div>
           </div>
-          <div className="absolute content-stretch flex gap-[15px] items-center justify-center left-[14px] top-[184px]">
-            <div className="relative shrink-0 size-[55px]" data-name="English">
-              <div className="absolute left-0 size-[55px] top-0">
-                <Helper2 />
-                <MaskGroup>
-                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img768PxSquareFlagOfTheUnitedKingdom2} />
-                </MaskGroup>
+
+          {/* Certificados */}
+          <div className="flex flex-col gap-6 w-full">
+            <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] text-[#6a6f8e] text-[25px] m-0">Certificados</p>
+            
+            {/* Grid Interno para os certificados ficarem lado a lado */}
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+              
+              {/* Cert 1 */}
+              <div className="border border-[#cad9ec] border-solid rounded-[24px] p-6 flex flex-col justify-center gap-4 h-[160px]">
+                <p className="font-['Inter:Regular',sans-serif] font-normal text-[#0a0614] text-[20px] m-0">Introdução a UI/UX Design</p>
+                <div className="flex gap-[5px] items-start text-[#6a6f8e]">
+                  <p className="font-['Inter:Thin',sans-serif] font-thin text-[16px] m-0">2025</p>
+                  <p className="font-['Heebo:Regular',sans-serif] font-normal text-[14px] m-0 tracking-[0.3px]">|</p>
+                  <p className="font-['Inter:Thin',sans-serif] font-thin text-[16px] m-0">Prefeitura de Fortaleza</p>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col font-['Inter:Thin',sans-serif] font-thin justify-center leading-[0] not-italic relative shrink-0 text-[#0a0614] text-[16px] whitespace-nowrap">
-              <p className="leading-[normal]">Japonês (Básico)</p>
+
+              {/* Cert 2 */}
+              <div className="border border-[#cad9ec] border-solid rounded-[24px] p-6 flex flex-col justify-center gap-4 h-[160px]">
+                <p className="font-['Inter:Regular',sans-serif] font-normal text-[#0a0614] text-[20px] m-0">Língua Inglesa</p>
+                <Helper1 text="2013 - 2017" text1="|" text2="Hilpro Idiomas" />
+              </div>
+
+              {/* Cert 3 */}
+              <div className="border border-[#cad9ec] border-solid rounded-[24px] p-6 flex flex-col justify-center gap-4 h-[160px]">
+                <p className="font-['Inter:Regular',sans-serif] font-normal text-[#0a0614] text-[20px] m-0">Língua Japonesa</p>
+                <Helper1 text="2024 - 2026" text1="|" text2="Universidade Estadual do Ceará" />
+              </div>
+
             </div>
           </div>
+
         </div>
-      </div>
-      <div className="absolute content-stretch flex flex-col gap-[30px] items-start left-[898px] top-[1337px] w-[409px]">
-        <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] not-italic relative shrink-0 text-[#6a6f8e] text-[25px] w-full whitespace-pre-wrap">Ferramentas</p>
-        <div className="h-[139px] relative shrink-0 w-full">
-          <div className="content-stretch flex flex-col gap-[10px] items-start px-[35px] py-[30px] relative size-full">
-            <div className="absolute bg-white h-[144px] left-0 rounded-[24px] top-0 w-[409px]">
-              <div className="overflow-clip relative rounded-[inherit] size-full">
-                <div className="absolute h-[79px] left-[36px] top-[30px] w-[55px]" />
-              </div>
-              <div aria-hidden="true" className="absolute border border-[#cad9ec] border-solid inset-0 pointer-events-none rounded-[24px]" />
+
+        {/* --- COLUNA DIREITA (Menor) --- */}
+        <div className="flex flex-col gap-16 w-full lg:w-[410px] shrink-0">
+          
+          {/* Design Skills */}
+          <div className="flex flex-col gap-6 w-full">
+            <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] text-[#6a6f8e] text-[25px] m-0">Design Skills</p>
+            <div className="bg-white border border-[#cad9ec] border-solid rounded-[24px] p-8 flex flex-col gap-5">
+              <Text text="Design de Experiência do Usuário (UX)" />
+              <Text text="Design de Interface do Usuário (UI)" />
+              <Wrapper2>Web Design</Wrapper2>
+              <Text text="Design System" />
+              <Text text="Design Thinking" />
+              <Text1 text="Aplicação de Testes de Usabilidade e Avaliação Heurística" />
             </div>
-            <div className="content-stretch flex gap-[68px] items-center relative shrink-0">
-              <div className="content-stretch flex flex-col gap-[5px] items-center justify-center relative shrink-0">
+          </div>
+
+          {/* Ferramentas */}
+          <div className="flex flex-col gap-6 w-full">
+            <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] text-[#6a6f8e] text-[25px] m-0">Ferramentas</p>
+            <div className="bg-white border border-[#cad9ec] border-solid rounded-[24px] py-8 px-6 flex justify-around items-center">
+              
+              {/* Figma */}
+              <div className="flex flex-col gap-3 items-center justify-center">
                 <Wrapper>
                   <circle cx="27.5" cy="27.5" fill="white" id="Ellipse 586" r="27" stroke="#CAD9EC" />
                   <g id="Frame 2080">
-                    <path d={svgPaths.p21347640} fill="#0ACF83" id="path0 fill" />
-                    <path d={svgPaths.p1f6dde00} fill="#A259FF" id="path1 fill" />
-                    <path d={svgPaths.p35839f00} fill="#F24E1E" id="path1 fill 1" />
-                    <path d={svgPaths.pde43900} fill="#FF7262" id="path2 fill" />
-                    <path d={svgPaths.pdccb200} fill="#1ABCFE" id="path3 fill" />
+                    <path d={svgPaths.p21347640} fill="#0ACF83" />
+                    <path d={svgPaths.p1f6dde00} fill="#A259FF" />
+                    <path d={svgPaths.p35839f00} fill="#F24E1E" />
+                    <path d={svgPaths.pde43900} fill="#FF7262" />
+                    <path d={svgPaths.pdccb200} fill="#1ABCFE" />
                   </g>
                 </Wrapper>
-                <div className="flex flex-col font-['Inter:Thin',sans-serif] font-thin justify-center leading-[0] not-italic relative shrink-0 text-[#0a0614] text-[16px] whitespace-nowrap">
-                  <p className="leading-[normal]">Figma</p>
-                </div>
+                <p className="font-['Inter:Thin',sans-serif] font-thin text-[#0a0614] text-[16px] m-0">Figma</p>
               </div>
-              <div className="content-stretch flex flex-col items-center justify-center relative shrink-0">
-                <div className="content-stretch flex flex-col gap-[5px] items-center justify-center relative shrink-0">
-                  <div className="relative shrink-0 size-[55px]">
-                    <Helper2 />
-                    <div className="absolute left-[15.5px] size-[25px] top-[15px]" data-name="Adobe-Photoshop-CC-PNG-Logo-1024x999 4">
-                      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdobePhotoshopCcPngLogo1024X9994} />
-                    </div>
-                  </div>
-                  <div className="flex flex-col font-['Inter:Thin',sans-serif] font-thin justify-center leading-[0] not-italic relative shrink-0 text-[#0a0614] text-[16px] whitespace-nowrap">
-                    <p className="leading-[normal]">Photoshop</p>
+
+              {/* Photoshop */}
+              <div className="flex flex-col gap-3 items-center justify-center">
+                <div className="relative shrink-0 size-[55px]">
+                  <Helper2 />
+                  <div className="absolute left-[15.5px] size-[25px] top-[15px]">
+                    <img alt="Photoshop" className="absolute inset-0 max-w-none object-cover size-full" src={imgAdobePhotoshopCcPngLogo1024X9994} />
                   </div>
                 </div>
+                <p className="font-['Inter:Thin',sans-serif] font-thin text-[#0a0614] text-[16px] m-0">Photoshop</p>
               </div>
-              <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-                <div className="col-1 content-stretch flex flex-col gap-[5px] items-center justify-center ml-0 mt-0 relative row-1">
-                  <Wrapper>
-                    <circle cx="27.5" cy="27.5" fill="white" id="Ellipse 586" r="27" stroke="#CAD9EC" />
-                  </Wrapper>
-                  <div className="flex flex-col font-['Inter:Thin',sans-serif] font-thin justify-center leading-[0] not-italic relative shrink-0 text-[#0a0614] text-[16px] whitespace-nowrap">
-                    <p className="leading-[normal]">Illustrator</p>
+
+              {/* Illustrator */}
+              <div className="flex flex-col gap-3 items-center justify-center">
+                <div className="relative shrink-0 size-[55px]">
+                  <Helper2 />
+                  <div className="absolute left-[15px] size-[25px] top-[15px]">
+                    <img alt="Illustrator" className="absolute inset-0 max-w-none object-cover rounded-[4px] size-full" src={imgAdobeIllustratorCcLogo1024X9993} />
                   </div>
                 </div>
-                <div className="col-1 ml-[21px] mt-[15px] relative rounded-[4px] row-1 size-[25px]" data-name="adobe-illustrator-cc-Logo-1024x999 3">
-                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[4px] size-full" src={imgAdobeIllustratorCcLogo1024X9993} />
-                </div>
+                <p className="font-['Inter:Thin',sans-serif] font-thin text-[#0a0614] text-[16px] m-0">Illustrator</p>
               </div>
+
             </div>
           </div>
+
+          {/* Idiomas */}
+          <div className="flex flex-col gap-6 w-full">
+            <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[40px] text-[#6a6f8e] text-[25px] m-0">Idiomas</p>
+            <div className="bg-white border border-[#cad9ec] border-solid rounded-[24px] p-6 flex flex-col gap-6">
+              
+              {/* Português */}
+              <div className="flex gap-[15px] items-center">
+                <div className="relative shrink-0 size-[55px]">
+                  <Helper2 />
+                  <div className="absolute contents left-[15px] top-[15px]">
+                    <div className="absolute left-[12.5px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[2.5px_2.5px] mask-size-[25px_25px] size-[30px] top-[12.5px]" style={{ maskImage: `url('${img5105STfNoNl1}')` }}>
+                      <img alt="BR Flag" className="absolute inset-0 max-w-none object-cover size-full" src={img5105STfNoNl2} />
+                    </div>
+                  </div>
+                </div>
+                <p className="font-['Inter:Thin',sans-serif] font-thin text-[#0a0614] text-[16px] m-0">Português (Nativo)</p>
+              </div>
+
+              {/* Inglês */}
+              <div className="flex gap-[15px] items-center">
+                <div className="relative shrink-0 size-[55px]">
+                  <Helper2 />
+                  <MaskGroup>
+                    <img alt="UK Flag" className="absolute inset-0 max-w-none object-cover size-full" src={img768PxSquareFlagOfTheUnitedKingdom1} />
+                  </MaskGroup>
+                </div>
+                <p className="font-['Inter:Thin',sans-serif] font-thin text-[#0a0614] text-[16px] m-0">Inglês (Avançado)</p>
+              </div>
+
+              {/* Japonês */}
+              <div className="flex gap-[15px] items-center">
+                <div className="relative shrink-0 size-[55px]">
+                  <Helper2 />
+                  <MaskGroup>
+                    <img alt="JP Flag" className="absolute inset-0 max-w-none object-cover size-full" src={img768PxSquareFlagOfTheUnitedKingdom2} />
+                  </MaskGroup>
+                </div>
+                <p className="font-['Inter:Thin',sans-serif] font-thin text-[#0a0614] text-[16px] m-0">Japonês (Básico)</p>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
-      <div className="absolute content-stretch flex items-start left-[128px] top-[2198px]">
-        <p className="font-['Inter:Thin',sans-serif] font-thin leading-[normal] not-italic relative shrink-0 text-[#888] text-[12px] w-[99px] whitespace-pre-wrap">{`©2026 Lia Aires `}</p>
-      </div>
-      <div className="-translate-x-1/2 absolute h-0 left-[calc(50%-3.5px)] top-[2174px] w-[1177px]">
-        <div className="absolute inset-[-1px_0_0_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1177 1">
-            <line id="Line 9" stroke="var(--stroke-0, #CCCCCC)" x2="1177" y1="0.5" y2="0.5" />
-          </svg>
+
+      {/* --- FOOTER --- */}
+      <div className="w-full px-[128px] pb-10">
+        <div className="w-full border-t border-[#CCCCCC] pt-6 flex justify-between items-center">
+          <p className="font-['Inter:Thin',sans-serif] font-thin leading-[normal] not-italic text-[#888] text-[12px] m-0">
+            {`©2026 Lia Aires`}
+          </p>
+          <a href="https://www.linkedin.com/in/lia-aires-221000272/" target="_blank" rel="noopener noreferrer" className="leading-[normal] not-italic text-[#888] text-[12px] hover:text-[#0A66C2] transition-colors duration-200 cursor-pointer no-underline" style={{ fontFamily: 'Work Sans, sans-serif', fontWeight: 300 }}>
+            LinkedIn
+          </a>
         </div>
       </div>
-      <div className="absolute content-stretch flex items-start left-[1258px] top-[2189px]">
-        <a href="https://www.linkedin.com/in/lia-aires-221000272/" target="_blank" rel="noopener noreferrer" className="leading-[normal] not-italic relative shrink-0 text-[#888] text-[12px] hover:text-[#0A66C2] transition-colors duration-200 cursor-pointer" style={{ fontFamily: 'Work Sans, sans-serif', fontWeight: 300 }}>LinkedIn</a>
-      </div>
+
     </div>
   );
 }

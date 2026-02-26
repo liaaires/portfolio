@@ -129,10 +129,10 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden; /* Previne rolagem horizontal global */
   }
 
-  #root {
+#root {
     @apply mx-auto w-full max-w-[1440px] relative;
     overflow-x: clip;
     overflow-y: visible;
