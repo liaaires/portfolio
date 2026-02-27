@@ -65,7 +65,7 @@ function Text1({ text }: Text1Props) {
   return (
     <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full">
       <AkarIconsCircle />
-      <p className="font-['Inter:Thin',sans-serif] font-thin leading-[normal] not-italic relative shrink-0 text-[#0a0614] text-[16px] w-[291px] whitespace-pre-wrap">{text}</p>
+      <p className="font-['Inter:Thin',sans-serif] font-thin leading-[normal] not-italic relative flex-1 text-[#0a0614] text-[16px] whitespace-pre-wrap">{text}</p>
     </div>
   );
 }
@@ -104,7 +104,7 @@ function Helper1({ text, text1, text2 }: Helper1Props) {
     <div className="content-stretch flex gap-[5px] items-start relative shrink-0 text-[#6a6f8e] w-full">
       <p className="font-['Inter:Thin',sans-serif] font-thin not-italic relative shrink-0 text-[16px]">{text}</p>
       <p className="font-['Heebo:Regular',sans-serif] font-normal relative shrink-0 text-[14px] tracking-[0.3px]">{text1}</p>
-      <p className="font-['Inter:Thin',sans-serif] font-thin not-italic relative shrink-0 text-[16px] w-[218px] whitespace-pre-wrap">{text2}</p>
+      <p className="font-['Inter:Thin',sans-serif] font-thin not-italic relative flex-1 text-[16px] whitespace-pre-wrap">{text2}</p>
     </div>
   );
 }
@@ -117,14 +117,14 @@ function Helper({ text, text1 }: HelperProps) {
   return (
     <div className="content-stretch flex gap-[8px] items-start not-italic relative shrink-0 text-[#0a0614] w-full whitespace-pre-wrap">
       <p className="font-['Museo_Sans_Cyrl:300',sans-serif] relative shrink-0 text-[14px] w-[5px]">{text}</p>
-      <p className="font-['Inter:Thin',sans-serif] font-thin relative shrink-0 text-[16px] w-[608px]">{text1}</p>
+      <p className="font-['Inter:Thin',sans-serif] font-thin relative flex-1 min-w-[500px] text-[16px]">{text1}</p>
     </div>
   );
 }
 
 export default function About() {
   return (
-    <div className="bg-white min-h-screen overflow-x-hidden" data-name="About">
+    <div className="bg-white min-h-screen overflow-x-scroll" data-name="About">
       
       {/* SEÇÃO HERO (MENU + TÍTULO + FOTO) */}
       <div className="relative w-full min-h-[800px] bg-white overflow-hidden">
