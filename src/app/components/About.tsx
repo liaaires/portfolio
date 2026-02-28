@@ -365,7 +365,7 @@ export default function About() {
       <div className="w-full px-[128px] pb-10">
         <div className="w-full border-t border-[#CCCCCC] pt-6 flex justify-between items-center">
           <p className="font-['Inter:Thin',sans-serif] font-thin leading-[normal] not-italic text-[#888] text-[12px] m-0">
-            {`©2026 Lia Aires`}
+            {`(CC)2026 Lia Aires (Modified Template made by M. Ali)`}
           </p>
           <a href="https://www.linkedin.com/in/lia-aires-221000272/" target="_blank" rel="noopener noreferrer" className="leading-[normal] not-italic text-[#888] text-[12px] hover:text-[#0A66C2] transition-colors duration-200 cursor-pointer no-underline" style={{ fontFamily: 'Work Sans, sans-serif', fontWeight: 300 }}>
             LinkedIn
