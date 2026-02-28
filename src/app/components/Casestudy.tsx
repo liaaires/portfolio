@@ -874,7 +874,7 @@ export default function Casestudy() {
             <div className="h-px bg-[#CCCCCC] my-8" />
 
             <div className="flex justify-between items-center">
-              <p className="font-thin leading-[normal] not-italic text-[#888] text-[12px]" style={{ fontFamily: 'Inter, sans-serif' }}>©2026 Lia Aires</p>
+              <p className="font-thin leading-[normal] not-italic text-[#888] text-[12px]" style={{ fontFamily: 'Inter, sans-serif' }}>(CC)2026 Lia Aires (Modified template made by M. Ali)</p>
               <a href="https://www.linkedin.com/in/lia-aires-221000272/" target="_blank" rel="noopener noreferrer" className="leading-[normal] not-italic text-[#888] text-[12px] hover:text-[#0A66C2] transition-colors duration-200 cursor-pointer" style={{ fontFamily: 'Work Sans, sans-serif', fontWeight: 300 }}>LinkedIn</a>
             </div>
           </div>
