@@ -4,6 +4,7 @@ import svgPaths from "../../imports/svg-xk1xx3b6mn";
 import imgScreenChangeMe1 from "figma:asset/6eb422702da92dfb9342c62512abd49f6c005f19.png";
 import imgRectangle3124 from "figma:asset/c10ddd2906ba18fd1de5449fdb4f861bf5efda84.png";
 import { imgScreenChangeMe } from "../../imports/svg-x5gv1";
+import { MyAvatar } from "../../components/MyAvatar (1)";
 
 type CircleBackgroundImageProps = {
   additionalClassNames?: string;
@@ -69,30 +70,45 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col gap-[30px] items-center left-1/2 top-[calc(50%+19px)]">
-          <div className="content-stretch flex flex-col items-center leading-[normal] not-italic relative shrink-0 text-[#0a0614]">
-            <p className="font-bold relative shrink-0 text-[96px]" style={{ fontFamily: 'Inter, sans-serif' }}>Lia Aires</p>
-            <p className="font-extralight relative shrink-0 text-[30px] text-center w-[583px] whitespace-pre-wrap" style={{ fontFamily: 'Inter, sans-serif' }}>Estudante e Designer UI/UX projetando experiências com intenção e pesquisa</p>
-          </div>
-          <div className="content-stretch flex gap-[30px] items-center justify-center relative shrink-0">
-            <div onClick={() => document.getElementById('projetos-section')?.scrollIntoView({ behavior: 'smooth' })} className="cursor-pointer">
-              <BackgroundImageAndText text="Projetos" />
+        {/* NOVO LAYOUT HERO: Texto Esquerda + Avatar Direita */}
+        <div className="absolute inset-0 flex items-center justify-between px-[128px] w-full mt-20 pointer-events-none">
+          
+          {/* LADO ESQUERDO: Texto e Botões (pointer-events-auto para os botões funcionarem) */}
+          <div className="flex flex-col gap-8 items-start max-w-[650px] z-10 pointer-events-auto">
+            <div className="flex flex-col text-[#0a0614]">
+              <p className="font-bold text-[96px] leading-tight m-0" style={{ fontFamily: 'Inter, sans-serif' }}>Lia Aires</p>
+              <p className="font-extralight text-[30px] leading-tight m-0" style={{ fontFamily: 'Inter, sans-serif' }}>
+                Estudante e Designer UI/UX projetando experiências com intenção e pesquisa
+              </p>
             </div>
-            <a href="https://www.linkedin.com/in/lia-aires-221000272/" target="_blank" rel="noopener noreferrer" className="h-[49px] relative shrink-0 w-[48px]">
-              <div className="absolute bg-white h-[49px] left-0 rounded-[100px] top-[-0.5px] w-[48px] hover:bg-gray-50 transition-colors duration-200" data-name="ri:behance-fill">
-                <div className="content-stretch flex flex-col items-center justify-center overflow-clip p-[20px] relative rounded-[inherit] size-full">
-                  <div className="relative shrink-0 size-[24px]" data-name="ri:linkedin-fill">
-                    <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-                      <g id="ri:linkedin-fill">
-                        <path d={svgPaths.p2c13d80} fill="#0A66C2" id="Vector" />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-                <div aria-hidden="true" className="absolute border border-[#eaeaea] border-solid inset-0 pointer-events-none rounded-[100px] shadow-[0px_0px_0px_0px_rgba(0,0,0,0.25)]" />
+            
+            {/* Botões (Copiei os teus botões originais e ajustei para alinhamento à esquerda) */}
+            <div className="flex gap-[30px] items-center">
+              <div onClick={() => document.getElementById('projetos-section')?.scrollIntoView({ behavior: 'smooth' })} className="cursor-pointer">
+                <BackgroundImageAndText text="Projetos" />
               </div>
-            </a>
+              <a href="https://www.linkedin.com/in/lia-aires-221000272/" target="_blank" rel="noopener noreferrer" className="h-[49px] relative shrink-0 w-[48px]">
+                <div className="absolute bg-white h-[49px] left-0 rounded-[100px] top-[-0.5px] w-[48px] hover:bg-gray-50 transition-colors duration-200" data-name="ri:behance-fill">
+                  <div className="content-stretch flex flex-col items-center justify-center overflow-clip p-[20px] relative rounded-[inherit] size-full">
+                    <div className="relative shrink-0 size-[24px]" data-name="ri:linkedin-fill">
+                      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
+                        <g id="ri:linkedin-fill">
+                          <path d={svgPaths.p2c13d80} fill="#0A66C2" id="Vector" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <div aria-hidden="true" className="absolute border border-[#eaeaea] border-solid inset-0 pointer-events-none rounded-[100px] shadow-[0px_0px_0px_0px_rgba(0,0,0,0.25)]" />
+                </div>
+              </a>
+            </div>
           </div>
+
+          {/* LADO DIREITO: Avatar 3D (pointer-events-auto para interação com o rato) */}
+          <div className="shrink-0 z-10 pointer-events-auto">
+             <MyAvatar />
+          </div>
+
         </div>
         <div className="absolute top-[50px] left-0 right-0 px-[128px]">
           <div className="flex justify-between items-center">
